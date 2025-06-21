@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternConnect - Find Your Perfect Internship</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="" class="logo"><i class="fas fa-handshake"></i> InternConnect</a>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for internships, companies, or skills">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="#"><i class="fas fa-briefcase"></i> <span>Internships</span></a></li>
+                <li><a href="#"><i class="fas fa-network-wired"></i> <span>My Network</span></a></li>
+                <li><a href="#"><i class="fas fa-bell"></i> <span>Notifications</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="nav-profile-img">
+            </div>
+        </div>
+        <!-- Profile dropdown menu -->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg">
+                    <div>
+                        <h3>Sarah Johnson</h3>
+                        <a href="#">View your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <i class="fas fa-user"></i>
+                    <p>Account</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <i class="fas fa-cog"></i>
+                    <p>Settings</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <i class="fas fa-question-circle"></i>
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" width="100">
+                <div class="sidebar-profile-info">
+                    <h1>Sarah Johnson</h1>
+                    <h3>Computer Science Student at State University</h3>
+                    <p>Seeking Summer 2024 Internship | Web Development | Data Science</p>
+                </div>
+                <div class="sidebar-profile-stats">
+                    <div>
+                        <p>Who viewed your profile</p>
+                        <h4>128</h4>
+                    </div>
+                    <div>
+                        <p>Connections</p>
+                        <h4>243</h4>
+                        <span>Grow your network</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-activity">
+                <h3>Recent Internship Views</h3>
+                <a href="#"><i class="fas fa-briefcase"></i> Frontend Developer Intern at TechCorp</a>
+                <a href="#"><i class="fas fa-briefcase"></i> Data Analyst Intern at DataSystems</a>
+                <a href="#"><i class="fas fa-briefcase"></i> UX Design Intern at CreativeMinds</a>
+                <a href="#"><i class="fas fa-briefcase"></i> Backend Developer Intern at WebSolutions</a>
+                <h3>Show more <i class="fas fa-chevron-down"></i></h3>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg">
+                    <textarea rows="2" placeholder="Share an internship opportunity, ask a question, or post an update"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><i class="fas fa-image"></i> Photo</li>
+                    <li><i class="fas fa-video"></i> Video</li>
+                    <li><i class="fas fa-calendar-alt"></i> Event</li>
+                    <li><i class="fas fa-newspaper"></i> Write Article</li>
+                </div>
+                <button class="post-btn">Post</button>
+            </div>
+
+            <div class="sort-by">
+                <hr>
+                <p>Sort by: <span>top <i class="fas fa-chevron-down"></i></span></p>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                    <div>
+                        <h1>Michael Chen</h1>
+                        <small>HR Manager at TechCorp</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>TechCorp is looking for 3 Computer Science interns for our Summer 2024 program! You'll work on real projects with mentorship from senior engineers. Apply now!</p>
+                <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" width="100%" class="post-img">
+                
+                <div class="post-stats">
+                    <div>
+                        <i class="fas fa-thumbs-up"></i>
+                        <span>124</span>
+                    </div>
+                    <div>
+                        <span>48 comments</span>
+                        <span>22 shares</span>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div>
+                        <i class="far fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div>
+                        <i class="far fa-comment"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div>
+                        <i class="far fa-paper-plane"></i>
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg">
+                    <div>
+                        <h1>DataSystems Inc.</h1>
+                        <small>Official Page</small>
+                        <small>5 hours ago</small>
+                    </div>
+                </div>
+                <p>Our Data Analyst Internship program is now accepting applications! Gain hands-on experience with big data tools and work with our analytics team on real client projects. Perfect for statistics, CS, or business analytics majors.</p>
+                
+                <div class="post-stats">
+                    <div>
+                        <i class="fas fa-thumbs-up"></i>
+                        <span>89</span>
+                    </div>
+                    <div>
+                        <span>32 comments</span>
+                        <span>15 shares</span>
+                    </div>
+                </div>
+
+                <div class="post-activity">
+                    <div>
+                        <i class="far fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div>
+                        <i class="far fa-comment"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div>
+                        <i class="far fa-paper-plane"></i>
+                        <span>Send</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <h3>Internship News</h3>
+                <a href="#">Summer internship deadlines approaching</a>
+                <span>1d ago • 1,482 readers</span>
+                
+                <a href="#">How to stand out in your internship application</a>
+                <span>2d ago • 3,291 readers</span>
+                
+                <a href="#">Top 10 companies for CS internships</a>
+                <span>3d ago • 5,122 readers</span>
+                
+                <a href="#">Remote internships: Pros and cons</a>
+                <span>4d ago • 2,901 readers</span>
+                
+                <a href="#">Converting your internship to a full-time offer</a>
+                <span>1w ago • 8,327 readers</span>
+                
+                <a href="#" class="show-more">Show more <i class="fas fa-chevron-down"></i></a>
+            </div>
+
+            <div class="sidebar-featured">
+                <h3>Featured Internships</h3>
+                <div class="featured-item">
+                    <img src="https://logo.clearbit.com/google.com">
+                    <div>
+                        <h4>Google</h4>
+                        <p>Software Engineering Intern</p>
+                        <span>Apply by May 15</span>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="https://logo.clearbit.com/facebook.com">
+                    <div>
+                        <h4>Meta</h4>
+                        <p>Product Design Intern</p>
+                        <span>Apply by May 20</span>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="https://logo.clearbit.com/microsoft.com">
+                    <div>
+                        <h4>Microsoft</h4>
+                        <p>Data Science Intern</p>
+                        <span>Apply by May 30</span>
+                    </div>
+                </div>
+                <a href="#" class="show-more">See all featured <i class="fas fa-chevron-down"></i></a>
+            </div>
+
+            <div class="sidebar-skills">
+                <h3>Add skills to get internship recommendations</h3>
+                <div class="skills-list">
+                    <span>JavaScript</span>
+                    <span>Python</span>
+                    <span>React</span>
+                    <span>Data Analysis</span>
+                    <span>UI/UX</span>
+                    <span>SQL</span>
+                </div>
+                <button class="skills-btn">Add skills</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>    
