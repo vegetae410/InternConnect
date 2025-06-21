@@ -1,26 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - InternConnect</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - InternConnect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    
+    .profile-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .profile-header {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #ddd;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7f8c8d;
+      font-size: 40px;
+    }
+    
+    .username {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .email {
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+    
+    .profile-details {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    
+    .detail-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .detail-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .detail-label {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+    
+    .logout-btn {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    
+    .logout-btn:hover {
+      background-color: #c0392b;
+    }
+  </style>
 </head>
 <body>
-  <div class="login-container">
-    <h2><i class="fas fa-handshake"></i> InternConnect</h2>
-    <form action="/signup" method="post" id="loginForm">
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Email address" required>
+  <div class="profile-container">
+    <div class="profile-header">
+      <div class="profile-pic">
+        <i class="fas fa-user"></i>
       </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="Password" required >
+      <div class="username" id="profileUsername"></div>
+      <div class="email" id="profileEmail"></div>
+      <button class="logout-btn" id="logoutBtn">Log Out</button>
+    </div>
+    
+    <div class="profile-details">
+      <h3>Account Details</h3>
+      <div class="detail-item">
+        <div class="detail-label">Member Since</div>
+        <div id="memberSince">Today</div>
       </div>
-      <button type="submit-btn">Sign Up</button>
-    </form>
+      <div class="detail-item">
+        <div class="detail-label">Profile Status</div>
+        <div>Basic Profile (add more info to complete your profile)</div>
+      </div>
+    </div>
   </div>
-  <script src="script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get user data from localStorage
+      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      
+      if (!currentUser) {
+        window.location.href = 'index.html';
+        return;
+      }
+      
+      // Display user info
+      document.getElementById('profileUsername').textContent = currentUser.username;
+      document.getElementById('profileEmail').textContent = currentUser.email;
+      
+      // Logout functionality
+      document.getElementById('logoutBtn').addEventListener('click', function() {
+        localStorage.removeItem('currentUser');
+        window.location.href = 'index.html';
+      });
+    });
+  </script>
 </body>
 </html>
